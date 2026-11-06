@@ -1,0 +1,793 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Braulio Zapata | Volkswagen Datsa</title>
+
+    <meta name="description" content="Braulio Zapata, Asesor Profesional de Ventas Volkswagen Datsa. Conoce nuestra gama, promociones y opciones de financiamiento.">
+
+    <style>
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+            background: #f5f6f8;
+            color: #111827;
+            line-height: 1.5;
+        }
+
+        .container {
+            width: min(100% - 32px, 1100px);
+            margin: auto;
+        }
+
+        header {
+            background: #ffffff;
+            padding: 18px 0;
+            border-bottom: 1px solid #e5e7eb;
+        }
+
+        .brand {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            gap: 16px;
+        }
+
+ .vw-logo {
+    width: 48px;
+    height: 48px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+}
+
+.vw-logo img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    display: block;
+}
+
+        .brand-text strong {
+            display: block;
+            color: #001e50;
+            font-size: 18px;
+        }
+
+        .brand-text span {
+            color: #6b7280;
+            font-size: 13px;
+        }
+
+        .hero {
+            background: linear-gradient(135deg, #001e50, #003b7a);
+            color: white;
+            padding: 58px 0;
+        }
+
+        .hero-content {
+            display: grid;
+            grid-template-columns: 1fr 320px;
+            align-items: center;
+            gap: 40px;
+        }
+
+        .eyebrow {
+            font-size: 14px;
+            letter-spacing: .08em;
+            text-transform: uppercase;
+            opacity: .8;
+            margin-bottom: 12px;
+        }
+
+        h1 {
+            font-size: clamp(38px, 6vw, 64px);
+            line-height: 1;
+            margin-bottom: 18px;
+        }
+
+        .hero h2 {
+            font-size: 21px;
+            font-weight: 500;
+            margin-bottom: 14px;
+        }
+
+        .hero p {
+            max-width: 650px;
+            color: #e5edf7;
+            font-size: 17px;
+        }
+
+        .profile-placeholder {
+            width: 260px;
+            height: 260px;
+            margin: auto;
+            border-radius: 50%;
+            background: rgba(255,255,255,.12);
+            border: 1px solid rgba(255,255,255,.25);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: #dbeafe;
+            text-align: center;
+            padding: 30px;
+            overflow: hidden;
+padding: 0;
+        }
+        .profile-placeholder img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center 28%;
+    display: block;
+}
+
+        .actions {
+            padding: 24px 0;
+            background: white;
+        }
+
+        .action-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 14px;
+        }
+
+        .action {
+            text-decoration: none;
+            text-align: center;
+            padding: 17px;
+            border-radius: 12px;
+            font-weight: 700;
+            transition: transform .2s;
+        }
+
+        .action:hover {
+            transform: translateY(-2px);
+        }
+
+        .whatsapp {
+            background: #168b55;
+            color: white;
+        }
+
+        .appointment {
+            background: #001e50;
+            color: white;
+        }
+
+        section {
+            padding: 58px 0;
+        }
+
+        .section-title {
+            text-align: center;
+            margin-bottom: 30px;
+        }
+
+        .section-title h2 {
+            color: #001e50;
+            font-size: 32px;
+            margin-bottom: 8px;
+        }
+
+        .section-title p {
+            color: #6b7280;
+        }
+
+        .cards {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 16px;
+        }
+
+        .card {
+            background: white;
+            border-radius: 16px;
+            padding: 25px 20px;
+            box-shadow: 0 8px 25px rgba(0,0,0,.06);
+        }
+.card-link {
+    text-decoration: none;
+    color: inherit;
+    transition: transform .2s ease, box-shadow .2s ease;
+    cursor: pointer;
+}
+
+.card-link:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 12px 30px rgba(0,0,0,.10);
+}
+        .card-icon {
+            font-size: 28px;
+            margin-bottom: 12px;
+        }
+
+        .card h3 {
+            color: #001e50;
+            margin-bottom: 8px;
+        }
+
+        .card p {
+            color: #6b7280;
+            font-size: 14px;
+        }
+
+    .categories {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 18px;
+}
+
+.category {
+    background: white;
+    border-radius: 18px;
+    padding: 28px;
+    box-shadow: 0 8px 25px rgba(0,0,0,.06);
+}
+
+.category-link {
+    text-decoration: none;
+    color: inherit;
+    display: block;
+    transition: transform .2s ease, box-shadow .2s ease;
+    cursor: pointer;
+}
+
+.category-link:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 14px 30px rgba(0,0,0,.10);
+}
+
+.category-icon {
+    font-size: 34px;
+    margin-bottom: 16px;
+}
+
+.category h3 {
+    color: #001e50;
+    margin-bottom: 10px;
+    font-size: 22px;
+}
+
+.category p {
+    color: #6b7280;
+    font-size: 14px;
+    line-height: 1.6;
+    margin-bottom: 18px;
+}
+
+.category span {
+    color: #0057b8;
+    font-weight: 700;
+    font-size: 14px;
+}
+
+        .promotion {
+            background: #001e50;
+            color: white;
+            border-radius: 22px;
+            padding: 40px;
+            text-align: center;
+        }
+
+        .promotion h2 {
+            font-size: 32px;
+            margin-bottom: 12px;
+        }
+
+        .promotion p {
+            color: #dbeafe;
+            max-width: 650px;
+            margin: auto;
+        }
+
+        .contact {
+            background: white;
+            text-align: center;
+        }
+
+        .contact h2 {
+            color: #001e50;
+            margin-bottom: 12px;
+        }
+
+        .contact p {
+            color: #6b7280;
+            margin-bottom: 20px;
+        }
+
+        .contact a {
+            color: #001e50;
+            font-weight: 700;
+        }
+
+        footer {
+            background: #00142f;
+            color: #b8c5d6;
+            text-align: center;
+            padding: 28px 16px;
+            font-size: 13px;
+        }
+.promo-home {
+  padding: 70px 0;
+  background: #f5f7fa;
+}
+
+.promo-home-header {
+  text-align: center;
+  margin-bottom: 30px;
+}
+
+.promo-home-header span {
+  display: block;
+  color: #0066cc;
+  font-size: 13px;
+  font-weight: 800;
+  letter-spacing: 2px;
+  margin-bottom: 8px;
+}
+
+.promo-home-header h2 {
+  color: #001e50;
+  font-size: 38px;
+  margin-bottom: 8px;
+}
+
+.promo-home-header p {
+  color: #667085;
+  font-size: 17px;
+}
+
+.promo-carousel {
+  position: relative;
+  overflow: hidden;
+  border-radius: 24px;
+  background: white;
+  box-shadow: 0 10px 30px rgba(0, 30, 80, .08);
+}
+
+.promo-slides {
+  display: flex;
+  transition: transform .45s ease;
+}
+
+.promo-slide {
+  min-width: 100%;
+}
+
+.promo-slide a {
+  display: block;
+}
+
+.promo-slide img {
+  display: block;
+  width: 100%;
+  height: 560px;
+  object-fit: cover;
+  object-position: center;
+}
+
+.promo-arrow {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 48px;
+  height: 48px;
+  border: none;
+  border-radius: 50%;
+background: rgba(0, 30, 80, 0.55);
+  color: white;
+  font-size: 28px;
+  cursor: pointer;
+  backdrop-filter: blur(4px);
+-webkit-backdrop-filter: blur(4px);
+transition: background 0.25s ease;
+}
+.promo-arrow:hover {
+    background: rgba(0, 30, 80, 0.80);
+}
+.promo-prev {
+  left: 18px;
+}
+
+.promo-next {
+  right: 18px;
+}
+
+.promo-dots {
+  display: flex;
+  justify-content: center;
+  gap: 8px;
+  margin-top: 16px;
+}
+
+.promo-dot {
+  width: 10px;
+  height: 10px;
+  border: none;
+  border-radius: 50%;
+  background: #cbd5e1;
+}
+
+.promo-dot.active {
+  background: #001e50;
+}
+
+.promo-home-action {
+  text-align: center;
+  margin-top: 22px;
+}
+
+.promo-whatsapp {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  background: #159455;
+  color: white;
+  text-decoration: none;
+  font-weight: 750;
+  padding: 14px 24px;
+  border-radius: 10px;
+  transition: transform .2s ease, box-shadow .2s ease;
+}
+
+.promo-whatsapp:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 16px rgba(0, 0, 0, .12);
+}
+
+@media (max-width: 520px) {
+  .promo-whatsapp {
+    width: 100%;
+  }
+}
+
+@media (max-width: 700px) {
+  .promo-slide img {
+    height: 320px;
+  }
+
+  .promo-home-header h2 {
+    font-size: 30px;
+  }
+
+  .promo-arrow {
+    width: 40px;
+    height: 40px;
+  }
+}
+        @media (max-width: 800px) {
+            .hero-content {
+                grid-template-columns: 1fr;
+                text-align: center;
+            }
+
+            .profile-placeholder {
+                width: 210px;
+                height: 210px;
+            }
+
+            .cards {
+                grid-template-columns: repeat(2, 1fr);
+            }
+
+            .categories {
+                grid-template-columns: 1fr;
+            }
+        }
+
+        @media (max-width: 520px) {
+            .action-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .cards {
+                grid-template-columns: 1fr;
+            }
+
+            section {
+                padding: 42px 0;
+            }
+        }
+
+        @media (max-width: 768px) {
+
+    .promo-slide {
+        height: auto;
+    }
+
+    .promo-slide img {
+        width: 100%;
+        height: auto;
+        object-fit: contain;
+        display: block;
+    }
+
+}
+    </style>
+</head>
+<script>
+  const promoSlides = document.getElementById("promoSlides");
+  const promoItems = document.querySelectorAll(".promo-slide");
+  const promoPrev = document.getElementById("promoPrev");
+  const promoNext = document.getElementById("promoNext");
+  const promoDots = document.getElementById("promoDots");
+
+  let promoCurrent = 0;
+
+  promoItems.forEach((_, index) => {
+    const dot = document.createElement("button");
+    dot.classList.add("promo-dot");
+
+    if (index === 0) {
+      dot.classList.add("active");
+    }
+
+    dot.addEventListener("click", () => {
+      promoCurrent = index;
+      updatePromoCarousel();
+    });
+
+    promoDots.appendChild(dot);
+  });
+
+  function updatePromoCarousel() {
+    promoSlides.style.transform =
+      "translateX(-" + promoCurrent * 100 + "%)";
+
+    document.querySelectorAll(".promo-dot").forEach((dot, index) => {
+      dot.classList.toggle("active", index === promoCurrent);
+    });
+  }
+
+  promoNext.addEventListener("click", () => {
+    promoCurrent = (promoCurrent + 1) % promoItems.length;
+    updatePromoCarousel();
+  });
+
+  promoPrev.addEventListener("click", () => {
+    promoCurrent =
+      (promoCurrent - 1 + promoItems.length) % promoItems.length;
+    updatePromoCarousel();
+  });
+</script>
+<body>
+
+<header>
+    <div class="container brand">
+        <div class="brand">
+          <div class="vw-logo">
+    <img src="assets/images/logo/volkswagen-logo.png" alt="Volkswagen">
+</div>
+
+            <div class="brand-text">
+                <strong>Volkswagen Datsa</strong>
+                <span>VW Tarjeta Digital</span>
+            </div>
+        </div>
+    </div>
+</header>
+
+<main>
+
+    <section class="hero">
+        <div class="container hero-content">
+
+            <div>
+                <div class="eyebrow">Volkswagen Datsa · Tuxtla Gutiérrez</div>
+
+                <h1>Braulio Zapata</h1>
+
+                <h2>Asesor Profesional de Ventas Volkswagen Datsa</h2>
+
+                <p>
+                    Cada cliente tiene un camino diferente.
+                    Permíteme ayudarte a encontrar el Volkswagen ideal para ti.
+                </p>
+            </div>
+
+           <div class="profile-placeholder">
+    <img src="assets/images/Braulio-Zapata.jpeg" alt="Braulio Zapata - Asesor Profesional de Ventas Volkswagen Datsa">
+</div>
+
+        </div>
+    </section>
+
+    <section class="actions">
+        <div class="container action-grid">
+
+            <a class="action whatsapp"
+               href="https://wa.me/529611834007"
+               target="_blank">
+                💬 WhatsApp
+            </a>
+
+      <a class="action appointment"
+    href="https://www.google.com/maps/place/Volkswagen+DATSA/@16.7494195,-93.0927832,19.86z/data=!4m6!3m5!1s0x85ed279febab57e3:0xcadd0814be5e9371!8m2!3d16.749647!4d-93.092461!16s%2Fg%2F1tfshrs6?entry=ttu"
+   target="_blank">
+
+    📍 Cómo llegar a Volkswagen Datsa
+</a>
+
+        </div>
+    </section>
+
+<section>
+    <div class="container">
+
+        <div class="section-title">
+            <h2>¿Qué estás buscando?</h2>
+            <p>Estoy aquí para ayudarte a encontrar la mejor opción para ti.</p>
+        </div>
+
+        <div class="cards">
+
+    <a class="card card-link" href="#catalogo">
+        <div class="card-icon">🚗</div>
+        <h3>Conocer un vehículo</h3>
+        <p>Descubre modelos, versiones, características y disponibilidad.</p>
+    </a>
+
+    <a class="card card-link"
+       href="https://wa.me/529611834007?text=Hola%20Braulio%2C%20vi%20tu%20tarjeta%20digital%20y%20me%20gustaría%20revisar%20las%20opciones%20de%20financiamiento%20disponibles.%20¿Podrías%20ayudarme%20a%20encontrar%20la%20alternativa%20que%20mejor%20se%20adapte%20a%20mi%20presupuesto%3F"
+       target="_blank"
+       rel="noopener">
+        <div class="card-icon">💳</div>
+        <h3>Revisar opciones de financiamiento</h3>
+        <p>Conozcamos tu perfil y encontremos el plan que mejor se adapte a ti.</p>
+    </a>
+
+    <a class="card card-link"
+       href="https://wa.me/529611834007?text=Hola%20Braulio%2C%20vi%20tu%20tarjeta%20digital%20y%20me%20gustaría%20cotizar%20mi%20vehículo%20para%20tomarlo%20a%20cuenta%20en%20la%20compra%20de%20un%20Volkswagen.%20¿Podemos%20revisarlo%3F"
+       target="_blank"
+       rel="noopener">
+        <div class="card-icon">🔄</div>
+        <h3>Cotizar mi auto a cuenta</h3>
+        <p>Podemos revisar tu vehículo actual como parte de tu nuevo Volkswagen.</p>
+    </a>
+
+    <a class="card card-link"
+       href="https://wa.me/529611834007?text=Hola%20Braulio%2C%20vi%20tu%20tarjeta%20digital%20y%20me%20gustaría%20agendar%20una%20asesoría%20personalizada%20para%20conocer%20qué%20Volkswagen%20y%20qué%20opción%20se%20adaptan%20mejor%20a%20mis%20necesidades."
+       target="_blank"
+       rel="noopener">
+        <div class="card-icon">📅</div>
+        <h3>Agendar una asesoría</h3>
+        <p>Platiquemos personalmente y encontremos juntos la mejor opción.</p>
+    </a>
+
+</div>
+
+        </div>
+    </section>
+
+<section id="catalogo">
+    <div class="container">
+
+        <div class="section-title">
+            <h2>Conoce nuestra gama</h2>
+                <p>Encuentra el Volkswagen que va contigo.</p>
+            </div>
+
+           <div class="categories">
+
+    <a class="category category-link" href="coches/">
+        <div class="category-icon">🚗</div>
+        <h3>Coches</h3>
+        <p>Polo · Virtus · Jetta · GTI</p>
+        <span>Ver modelos →</span>
+    </a>
+
+  <a class="category category-link" href="SUVS/">
+        <div class="category-icon">🚙</div>
+        <h3>SUVs</h3>
+        <p>Tera · Nivus · Taigun · Taos · Tiguan · Teramont · Cross Sport · Saveiro</p>
+        <span>Ver modelos →</span>
+    </a>
+
+    <a class="category category-link" href="comerciales/">
+        <div class="category-icon">🚐</div>
+        <h3>Vehículos comerciales</h3>
+        <p>Amarok · Caddy · Transporter · Crafter</p>
+        <span>Ver modelos →</span>
+    </a>
+
+</div>
+            </div>
+
+        </div>
+    </section>
+
+
+
+   
+
+
+   <section class="promo-home">
+  <div class="container">
+
+    <div class="promo-home-header">
+      <span>VOLKSWAGEN DATSA</span>
+      <h2>Promociones destacadas</h2>
+      <p>Conoce nuestras promociones y eventos especiales.</p>
+    </div>
+
+    <div class="promo-carousel">
+
+      <div class="promo-slides" id="promoSlides">
+
+        <div class="promo-slide">
+          <a
+            href="https://wa.me/529611834007?text=Hola%20Braulio,%20vi%20la%20promoci%C3%B3n%20del%20Croquetat%C3%B3n%20en%20tu%20tarjeta%20digital%20y%20quiero%20m%C3%A1s%20informaci%C3%B3n."
+          >
+            <img
+              src="assets/images/promociones/croquetaton.png"
+              alt="Croquetatón Volkswagen Datsa"
+              
+            >
+          </a>
+        </div>
+
+      </div>
+
+      <button class="promo-arrow promo-prev" id="promoPrev">‹</button>
+      <button class="promo-arrow promo-next" id="promoNext">›</button>
+
+    </div>
+
+    <div class="promo-dots" id="promoDots"></div>
+
+ <div class="promo-home-action">
+  <a
+    href="https://wa.me/529611834007?text=Hola%20Braulio,%20vi%20una%20promoci%C3%B3n%20en%20tu%20tarjeta%20digital%20y%20me%20gustar%C3%ADa%20recibir%20m%C3%A1s%20informaci%C3%B3n."
+    class="promo-whatsapp"
+  >
+    💬 Quiero información de esta promoción
+  </a>
+</div>
+
+  </div>
+</section>
+
+    <section class="contact">
+
+        <div class="container">
+
+            <h2>¿Hablamos?</h2>
+
+            <p>
+                Estoy para ayudarte a encontrar tu próximo Volkswagen.
+            </p>
+
+            <a href="tel:+529611834007">
+                📞 961 183 4007
+            </a>
+
+            <br><br>
+
+            <a href="mailto:braulio.zapata@vw-datsa.com.mx">
+                ✉️ braulio.zapata@vw-datsa.com.mx
+            </a>
+
+        </div>
+
+    </section>
+
+</main>
+
+<footer>
+    Volkswagen Datsa · Tuxtla Gutiérrez, Chiapas
+    <br>
+    VW Tarjeta Digital
+</footer>
+
+</body>
+</html>

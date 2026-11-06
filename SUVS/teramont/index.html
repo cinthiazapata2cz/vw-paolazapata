@@ -1,0 +1,795 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>Volkswagen Teramont | Volkswagen Datsa</title>
+
+  <style>
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+      background: #f5f7fa;
+      color: #001e50;
+      line-height: 1.5;
+    }
+
+    .container {
+      width: min(100% - 32px, 1100px);
+      margin: auto;
+    }
+
+    header {
+      background: white;
+      border-bottom: 1px solid #e5e7eb;
+    }
+
+    .header-container {
+      min-height: 74px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    .brand {
+      font-size: 20px;
+      font-weight: 750;
+    }
+
+    .back {
+      color: #001e50;
+      text-decoration: none;
+      font-weight: 700;
+    }
+
+    .hero {
+      background: #001e50;
+      color: white;
+      padding: 72px 0;
+    }
+
+    .hero-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 48px;
+      align-items: center;
+    }
+
+    .eyebrow {
+      display: block;
+      font-size: 14px;
+      font-weight: 800;
+      letter-spacing: 2px;
+      color: #6bbcff;
+      margin-bottom: 14px;
+    }
+
+    h1 {
+      font-size: clamp(50px, 8vw, 80px);
+      line-height: .95;
+      margin-bottom: 18px;
+    }
+
+    .hero p {
+      color: #d9e5f5;
+      font-size: 19px;
+      max-width: 560px;
+      margin-bottom: 28px;
+    }
+
+    .hero-image {
+      height: 390px;
+      border-radius: 24px;
+      overflow: hidden;
+      background: #e9eef4;
+    }
+
+    .hero-image img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      object-position: center;
+      display: block;
+    }
+
+    .hero-buttons {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 12px;
+    }
+
+    .button {
+      display: inline-flex;
+      justify-content: center;
+      align-items: center;
+      padding: 15px 22px;
+      border-radius: 10px;
+      text-decoration: none;
+      font-weight: 750;
+    }
+
+    .primary {
+      background: white;
+      color: #001e50;
+    }
+
+    .secondary {
+      border: 1px solid rgba(255,255,255,.45);
+      color: white;
+    }
+
+    section {
+      padding: 68px 0;
+    }
+
+    .section-title {
+      text-align: center;
+      margin-bottom: 38px;
+    }
+
+    .section-title h2 {
+      font-size: clamp(30px, 5vw, 42px);
+      margin-bottom: 10px;
+    }
+
+    .section-title p {
+      color: #667085;
+      font-size: 17px;
+    }
+
+    .quick-data {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 18px;
+    }
+
+    .data-card {
+      text-align: center;
+      background: #eef4fb;
+      padding: 28px 20px;
+      border-radius: 18px;
+    }
+
+    .data-card strong {
+      display: block;
+      font-size: 28px;
+      margin-bottom: 4px;
+    }
+
+    .data-card span {
+      color: #667085;
+    }
+
+    .benefits {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 18px;
+    }
+
+    .benefit {
+      background: white;
+      border-radius: 18px;
+      padding: 30px;
+      box-shadow: 0 8px 26px rgba(0,30,80,.06);
+    }
+
+    .benefit-icon {
+      font-size: 30px;
+      margin-bottom: 16px;
+    }
+
+    .benefit h3 {
+      margin-bottom: 8px;
+      font-size: 21px;
+    }
+
+    .benefit p {
+      color: #667085;
+    }
+
+    .versions {
+      background: white;
+    }
+
+    .version-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 20px;
+      align-items: stretch;
+    }
+
+    .version {
+      border: 1px solid #e5e7eb;
+      border-radius: 22px;
+      padding: 30px;
+      box-shadow: 0 8px 24px rgba(0,30,80,.05);
+      display: flex;
+      flex-direction: column;
+    }
+
+    .version span {
+      color: #0066cc;
+      font-size: 13px;
+      font-weight: 800;
+      letter-spacing: 1.4px;
+    }
+
+    .version h3 {
+      font-size: 28px;
+      margin: 8px 0 4px;
+    }
+
+    .engine {
+      color: #001e50;
+      font-weight: 700;
+      margin-bottom: 16px;
+    }
+
+    .version ul {
+      padding-left: 20px;
+      color: #667085;
+      margin-bottom: 24px;
+      flex-grow: 1;
+    }
+
+    .version li {
+      margin-bottom: 7px;
+    }
+
+    .version-button {
+      background: #001e50;
+      color: white;
+    }
+
+    .highline {
+      border: 2px solid #001e50;
+      background: #f7f9fc;
+    }
+
+    .badge {
+      display: inline-block;
+      width: fit-content;
+      background: #001e50;
+      color: white !important;
+      padding: 6px 10px;
+      border-radius: 999px;
+      font-size: 11px !important;
+      margin-bottom: 8px;
+    }
+
+    .space-section {
+      background: #eef4fb;
+    }
+
+    .cta {
+      padding-top: 30px;
+    }
+
+    .cta-box {
+      background: #001e50;
+      color: white;
+      border-radius: 24px;
+      padding: 48px;
+      text-align: center;
+    }
+
+    .cta-box h2 {
+      font-size: clamp(30px, 5vw, 44px);
+      margin-bottom: 12px;
+    }
+
+    .cta-box p {
+      color: #d9e5f5;
+      font-size: 17px;
+      margin-bottom: 26px;
+    }
+
+    .cta-buttons {
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap;
+      gap: 12px;
+    }
+
+    .whatsapp {
+      background: #159455;
+      color: white;
+    }
+
+    .finance {
+      background: white;
+      color: #001e50;
+    }
+
+    footer {
+      padding: 30px 16px;
+      text-align: center;
+      color: #667085;
+      font-size: 14px;
+    }
+
+    @media (max-width: 900px) {
+      .hero-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .hero-image {
+        height: 330px;
+      }
+
+      .version-grid,
+      .benefits {
+        grid-template-columns: 1fr;
+      }
+
+      .quick-data {
+        grid-template-columns: repeat(2, 1fr);
+      }
+    }
+
+    @media (max-width: 520px) {
+      .hero {
+        padding: 48px 0;
+      }
+
+      .hero-image {
+        height: 270px;
+      }
+
+      .hero-buttons,
+      .cta-buttons {
+        flex-direction: column;
+      }
+
+      .button {
+        width: 100%;
+      }
+
+      .quick-data {
+        grid-template-columns: 1fr 1fr;
+      }
+
+      .cta-box {
+        padding: 34px 22px;
+      }
+
+      .brand {
+        font-size: 17px;
+      }
+
+      .back {
+        font-size: 14px;
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+<header>
+  <div class="container header-container">
+
+    <div class="brand">
+      Volkswagen Datsa
+    </div>
+
+    <a class="back" href="../">
+      ← Volver a SUVs
+    </a>
+
+  </div>
+</header>
+
+
+<main>
+
+  <!-- HERO -->
+
+  <section class="hero">
+
+    <div class="container hero-grid">
+
+      <div>
+
+        <span class="eyebrow">
+          VOLKSWAGEN DATSA
+        </span>
+
+        <h1>Teramont</h1>
+
+        <p>
+          Espacio para todos, potencia TSI y tecnología pensada
+          para viajar en grande. Descubre una SUV con hasta
+          tres filas de asientos y versiones con 4MOTION.
+        </p>
+
+        <div class="hero-buttons">
+
+          <a
+            class="button primary"
+            href="https://wa.me/529611834007?text=Hola%20Braulio,%20me%20interesa%20cotizar%20una%20Volkswagen%20Teramont%202026."
+          >
+            Cotizar mi Teramont
+          </a>
+
+          <a
+            class="button secondary"
+            href="#versiones"
+          >
+            Ver versiones
+          </a>
+
+        </div>
+
+      </div>
+
+
+      <div class="hero-image">
+
+        <img
+          src="../../assets/suvs/TERAMONT-HIGHLINE-PLATA.JPG"
+          alt="Volkswagen Teramont Highline"
+           loading="lazy"
+  decoding="async"
+        >
+
+      </div>
+
+    </div>
+
+  </section>
+
+
+  <!-- DATOS -->
+
+  <section>
+
+    <div class="container">
+
+      <div class="quick-data">
+
+        <div class="data-card">
+          <strong>269 hp</strong>
+          <span>Potencia</span>
+        </div>
+
+        <div class="data-card">
+          <strong>370 Nm</strong>
+          <span>Torque</span>
+        </div>
+
+        <div class="data-card">
+          <strong>2.0 TSI</strong>
+          <span>Motor Turbo</span>
+        </div>
+
+        <div class="data-card">
+          <strong>Tiptronic 8</strong>
+          <span>Transmisión</span>
+        </div>
+
+      </div>
+
+    </div>
+
+  </section>
+
+
+  <!-- BENEFICIOS -->
+
+  <section>
+
+    <div class="container">
+
+      <div class="section-title">
+
+        <h2>¿Por qué Teramont?</h2>
+
+        <p>
+          Espacio, confort y desempeño para viajar sin límites.
+        </p>
+
+      </div>
+
+
+      <div class="benefits">
+
+        <div class="benefit">
+
+          <div class="benefit-icon">👨‍👩‍👧‍👦</div>
+
+          <h3>Hasta 7 pasajeros</h3>
+
+          <p>
+            Trendline y Peak Edition ofrecen siete lugares,
+            mientras Highline incorpora seis plazas con
+            asientos de capitán en segunda fila.
+          </p>
+
+        </div>
+
+
+        <div class="benefit">
+
+          <div class="benefit-icon">⛰️</div>
+
+          <h3>4MOTION disponible</h3>
+
+          <p>
+            Peak Edition y Highline incorporan tracción
+            integral 4MOTION para mayor capacidad y confianza.
+          </p>
+
+        </div>
+
+
+        <div class="benefit">
+
+          <div class="benefit-icon">🧳</div>
+
+          <h3>Enorme capacidad</h3>
+
+          <p>
+            Hasta 2,735 litros de espacio de carga
+            al abatir segunda y tercera fila.
+          </p>
+
+        </div>
+
+      </div>
+
+    </div>
+
+  </section>
+
+
+  <!-- VERSIONES -->
+
+  <section class="versions" id="versiones">
+
+    <div class="container">
+
+      <div class="section-title">
+
+        <h2>Conoce las versiones</h2>
+
+        <p>
+          Tres maneras de disfrutar el espacio y desempeño de Teramont.
+        </p>
+
+      </div>
+
+
+      <div class="version-grid">
+
+
+        <!-- TRENDLINE -->
+
+        <div class="version">
+
+          <span>TERAMONT 2026</span>
+
+          <h3>Trendline</h3>
+
+          <p class="engine">
+            2.0 TSI · 269 hp · Tiptronic 8
+          </p>
+
+          <ul>
+            <li>370 Nm de torque</li>
+            <li>Tracción delantera</li>
+            <li>7 pasajeros</li>
+            <li>Control crucero adaptativo ACC</li>
+            <li>Light Assist</li>
+            <li>Punto ciego con alerta de tráfico trasero</li>
+            <li>Cámara de visión trasera</li>
+            <li>Sensores delanteros y traseros</li>
+            <li>Climatronic de 3 zonas</li>
+            <li>Pantalla touch de 12"</li>
+            <li>Volkswagen Digital Cockpit</li>
+            <li>Sistema de navegación</li>
+            <li>Cargador inalámbrico</li>
+            <li>Rines de aluminio de 18"</li>
+          </ul>
+
+          <a
+            class="button version-button"
+            href="https://wa.me/529611834007?text=Hola%20Braulio,%20quiero%20informaci%C3%B3n%20de%20Volkswagen%20Teramont%20Trendline%202026."
+          >
+            Consultar esta versión →
+          </a>
+
+        </div>
+
+
+        <!-- PEAK EDITION -->
+
+        <div class="version">
+
+          <span>TERAMONT 2026</span>
+
+          <h3>Peak Edition</h3>
+
+          <p class="engine">
+            2.0 TSI · 269 hp · Tiptronic 8 · 4MOTION
+          </p>
+
+          <ul>
+            <li>370 Nm de torque</li>
+            <li>Tracción 4MOTION</li>
+            <li>7 pasajeros</li>
+            <li>Asistencia de arranque y descenso en pendiente</li>
+            <li>Encendido remoto</li>
+            <li>Pedal Virtual</li>
+            <li>Asiento del conductor eléctrico con memoria</li>
+            <li>Asiento del copiloto eléctrico</li>
+            <li>Iluminación ambiental de 30 colores</li>
+            <li>Techo corredizo panorámico</li>
+            <li>Logo VW iluminado</li>
+            <li>Gancho para remolque</li>
+            <li>Rines de aluminio de 18"</li>
+          </ul>
+
+          <a
+            class="button version-button"
+            href="https://wa.me/529611834007?text=Hola%20Braulio,%20quiero%20informaci%C3%B3n%20de%20Volkswagen%20Teramont%20Peak%20Edition%202026."
+          >
+            Consultar esta versión →
+          </a>
+
+        </div>
+
+
+        <!-- HIGHLINE -->
+
+        <div class="version highline">
+
+          <span class="badge">
+            MÁXIMO EQUIPAMIENTO
+          </span>
+
+          <span>TERAMONT 2026</span>
+
+          <h3>Highline</h3>
+
+          <p class="engine">
+            2.0 TSI · 269 hp · Tiptronic 8 · 4MOTION
+          </p>
+
+          <ul>
+            <li>6 pasajeros</li>
+            <li>Asientos de capitán en segunda fila</li>
+            <li>Cámara de 360°</li>
+            <li>Asistente de aparcamiento Volkswagen</li>
+            <li>Head-Up Display</li>
+            <li>Harman Kardon con Subwoofer</li>
+            <li>Asientos delanteros calefactables y ventilados</li>
+            <li>Función de masaje</li>
+            <li>Asientos de segunda fila con calefacción</li>
+            <li>Vestiduras parcialmente en piel</li>
+            <li>Iluminación ambiental de 30 colores</li>
+            <li>Logo VW iluminado</li>
+            <li>Techo panorámico</li>
+            <li>Rines de aluminio de 20"</li>
+          </ul>
+
+          <a
+            class="button version-button"
+            href="https://wa.me/529611834007?text=Hola%20Braulio,%20quiero%20informaci%C3%B3n%20de%20Volkswagen%20Teramont%20Highline%202026."
+          >
+            Consultar esta versión →
+          </a>
+
+        </div>
+
+      </div>
+
+    </div>
+
+  </section>
+
+
+  <!-- ESPACIO -->
+
+  <section class="space-section">
+
+    <div class="container">
+
+      <div class="section-title">
+
+        <h2>Espacio para todos tus planes</h2>
+
+        <p>
+          Tres filas de asientos y una capacidad de carga
+          que se adapta a cada viaje.
+        </p>
+
+      </div>
+
+
+      <div class="quick-data">
+
+        <div class="data-card">
+          <strong>583 L</strong>
+          <span>Cajuela</span>
+        </div>
+
+        <div class="data-card">
+          <strong>1,572 L</strong>
+          <span>Con segunda fila en uso</span>
+        </div>
+
+        <div class="data-card">
+          <strong>2,735 L</strong>
+          <span>Capacidad máxima</span>
+        </div>
+
+        <div class="data-card">
+          <strong>3 filas</strong>
+          <span>De asientos</span>
+        </div>
+
+      </div>
+
+    </div>
+
+  </section>
+
+
+  <!-- CTA -->
+
+  <section class="cta">
+
+    <div class="container">
+
+      <div class="cta-box">
+
+        <h2>¿Cuál Teramont va contigo?</h2>
+
+        <p>
+          Te ayudo a comparar Trendline, Peak Edition y Highline,
+          revisar disponibilidad y encontrar la mejor opción
+          de financiamiento para ti.
+        </p>
+
+
+        <div class="cta-buttons">
+
+          <a
+            class="button whatsapp"
+            href="https://wa.me/529611834007?text=Hola%20Braulio,%20vi%20Volkswagen%20Teramont%20en%20tu%20tarjeta%20digital%20y%20quiero%20recibir%20una%20cotizaci%C3%B3n."
+          >
+            💬 Cotizar Teramont
+          </a>
+
+
+          <a
+            class="button finance"
+            href="https://wa.me/529611834007?text=Hola%20Braulio,%20quiero%20conocer%20las%20opciones%20de%20financiamiento%20para%20Volkswagen%20Teramont."
+          >
+            💳 Revisar financiamiento
+          </a>
+
+        </div>
+
+      </div>
+
+    </div>
+
+  </section>
+
+</main>
+
+
+<footer>
+  Volkswagen Datsa · Tuxtla Gutiérrez, Chiapas
+</footer>
+
+</body>
+</html>
